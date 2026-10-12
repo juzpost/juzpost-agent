@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 (2026-10-12)
+
+- Attaching media in chat goes through `upload_file`: the user picks the files in JuzPost's upload card, so nothing on claude.ai has to be allowed. `upload_media` is for public links, `create_upload_url` for Claude Code.
+
 ## 0.2.0 (2026-10-08)
 
 - `setup` tells Claude how to reconnect a JuzPost connector that is added but signed out, on claude.ai, the apps and Claude Code, and how to answer "what can JuzPost do".
