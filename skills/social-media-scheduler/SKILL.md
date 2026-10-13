@@ -21,7 +21,8 @@ If the JuzPost tools are missing or signed out, follow the `setup` skill first. 
 4. **Check the fit.** For captions, titles or media near a limit, call `get_platform_limits` for the platforms involved.
 5. **Platform choices.** A Pinterest account needs a board: call `list_options` with `req_type` `list_board`, ask which one, and pass it as `pinterest` keyed by account id with `board_id`. For a WordPress post type other than a blog post, use `list_post_type`. For Bluesky images or video, ask for alt text for each file and whether a content warning is needed (`bluesky`: `alt_text`, `labels`).
 6. **Attach media.**
-   - A file the user attached in chat or a public link: `upload_media` (`file` or `url`), keep the `media_key`. A public link can also go straight into `media_urls`.
+   - A file the user attached in chat or has on their device, on claude.ai, Claude Desktop or the mobile app: `upload_file`. It shows an upload card where the user picks the files; you cannot read their attachment yourself, so never pass its path anywhere. When the card says Uploaded and the user sends a message, the `media_key` of each file is in your context.
+   - A public link: `upload_media` with `url`, keep the `media_key`. A public link can also go straight into `media_urls`.
    - A local file or any video in Claude Code: `create_upload_url`, then PUT the original bytes, unchanged, to `upload_url` with the returned header. Keep the `media_key`.
 7. **Confirm.** Show the caption, media, each account (platform and username), any per-account differences, and the time in the workspace timezone. Wait for the user to agree.
 8. **Schedule.** One `schedule_post` call creates and schedules the post: `type`, `content`, `title` if needed, `media_keys` or `media_urls`, `account_ids`, either `publish_at` (ISO 8601 UTC, at least 10 minutes ahead) or `publish_now: true`, and an `idempotency_key` so a retry never makes a second post.
