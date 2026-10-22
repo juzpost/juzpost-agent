@@ -1,6 +1,6 @@
 # JuzPost for Claude: social media scheduler with MCP and CLI
 
-**JuzPost is a free social media scheduler for YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.** This plugin connects it to Claude Code and Claude Cowork over MCP, so you can draft, schedule and publish posts by asking Claude. Every paid plan, from Solo at $19/month, includes full access from Claude plus the [JuzPost CLI](https://github.com/juzpost/juzpost-cli).
+**JuzPost is a free social media scheduler for YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.** This plugin connects it to Claude Code and Claude Cowork over MCP, so you can draft, schedule and publish posts by asking Claude. Every paid plan includes full access from Claude plus the [JuzPost CLI](https://github.com/juzpost/juzpost-cli).
 
 One upload, every platform, and a clear report of what went out.
 
@@ -53,13 +53,12 @@ The plugin also adds two commands:
 
 YouTube (including Shorts), Instagram, Facebook Pages, TikTok, X (Twitter), LinkedIn, Pinterest, Bluesky, Threads, Tumblr, WordPress.
 
-## Plans and pricing
+## Plans
 
-Prices as of October 2026. See the [pricing page](https://www.juzpost.com/pricing) for current details.
+See the [pricing page](https://www.juzpost.com/pricing) for prices and current details.
 
 | | Free | Solo | Growth | Pro |
 |---|---|---|---|---|
-| Price | $0 | $19/month | $29/month | $69/month |
 | Social accounts | 2 | 5 | 15 | 50 |
 | Workspaces | 1 | 1 | 2 | 5 |
 | Team members | | | Up to 50 | Up to 50 |
@@ -69,7 +68,7 @@ Prices as of October 2026. See the [pricing page](https://www.juzpost.com/pricin
 | Claude and AI agents (MCP) | | Yes: upload, draft, schedule, publish | Yes | Yes |
 | REST API and command line (CLI) | | Yes | Yes | Yes |
 
-Paid plans include a 7-day free trial and a 30-day money-back guarantee.
+Paid plans include a 7-day free trial.
 
 ## How it works
 
@@ -92,7 +91,7 @@ juzpost auth login
 ## FAQ
 
 **Is JuzPost free?**
-Yes. The Free plan schedules posts to 2 accounts on every network except X, and it is never charged. Using JuzPost from Claude or other AI agents starts with Solo at $19/month.
+Yes. The Free plan schedules posts to 2 accounts on every network except X, and it is never charged. Using JuzPost from Claude or other AI agents starts with Solo.
 
 **Which plan do I need to post from Claude?**
 Any paid plan: Solo, Growth or Pro. Each one lets Claude upload media, create drafts, schedule and publish.
