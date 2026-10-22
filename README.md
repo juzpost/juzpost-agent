@@ -1,6 +1,6 @@
 # JuzPost for Claude: social media scheduler with MCP and CLI
 
-**JuzPost is a free social media scheduler for YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.** This plugin connects it to Claude Code and Claude Cowork over MCP, so you can draft, schedule and publish posts by asking Claude. AI agent access starts at $15/month, and full publishing from Claude plus the [JuzPost CLI](https://github.com/juzpost/juzpost-cli) come with Pro at $69/month.
+**JuzPost is a free social media scheduler for YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.** This plugin connects it to Claude Code and Claude Cowork over MCP, so you can draft, schedule and publish posts by asking Claude. Every paid plan, from Solo at $19/month, includes full access from Claude plus the [JuzPost CLI](https://github.com/juzpost/juzpost-cli).
 
 One upload, every platform, and a clear report of what went out.
 
@@ -55,19 +55,19 @@ YouTube (including Shorts), Instagram, Facebook Pages, TikTok, X (Twitter), Link
 
 ## Plans and pricing
 
-Prices as of September 2026. See the [pricing page](https://www.juzpost.com/pricing) for current details.
+Prices as of October 2026. See the [pricing page](https://www.juzpost.com/pricing) for current details.
 
 | | Free | Solo | Growth | Pro |
 |---|---|---|---|---|
-| Price | $0 | $15/month | $30/month | $69/month |
-| Social accounts | 2 | 10 | 30 | 50 |
+| Price | $0 | $19/month | $29/month | $69/month |
+| Social accounts | 2 | 5 | 15 | 50 |
 | Workspaces | 1 | 1 | 2 | 5 |
-| Team members | | | Unlimited | Unlimited |
+| Team members | | | Up to 50 | Up to 50 |
 | Posts | 15 queued at a time | Unlimited | Unlimited | Unlimited |
 | Schedule ahead | 30 days | 180 days | 180 days | 180 days |
 | Networks | All except X | All 9 | All 9 | All 9 |
-| Claude and AI agents (MCP) | | Read: accounts, posts, queue, limits | Read: accounts, posts, queue, limits | Full: upload, draft, schedule, publish |
-| Command line (CLI) | | | | Yes |
+| Claude and AI agents (MCP) | | Yes: upload, draft, schedule, publish | Yes | Yes |
+| REST API and command line (CLI) | | Yes | Yes | Yes |
 
 Paid plans include a 7-day free trial and a 30-day money-back guarantee.
 
@@ -82,7 +82,7 @@ Full tool reference: [api.juzpost.com/docs](https://api.juzpost.com/docs).
 
 ## From the terminal
 
-[juzpost-cli](https://github.com/juzpost/juzpost-cli) schedules and posts from your shell, cron jobs or CI, using the same JuzPost account. It needs the Pro plan.
+[juzpost-cli](https://github.com/juzpost/juzpost-cli) schedules and posts from your shell, cron jobs or CI, using the same JuzPost account. It works on every paid plan.
 
 ```bash
 npm install -g juzpost-cli
@@ -92,10 +92,10 @@ juzpost auth login
 ## FAQ
 
 **Is JuzPost free?**
-Yes. The Free plan schedules posts to 2 accounts on every network except X, and it is never charged. Using JuzPost from Claude or other AI agents starts with Solo at $15/month.
+Yes. The Free plan schedules posts to 2 accounts on every network except X, and it is never charged. Using JuzPost from Claude or other AI agents starts with Solo at $19/month.
 
 **Which plan do I need to post from Claude?**
-Pro. Solo and Growth let Claude read your accounts, queue and posts. Pro lets Claude upload media, create drafts, schedule and publish.
+Any paid plan: Solo, Growth or Pro. Each one lets Claude upload media, create drafts, schedule and publish.
 
 **Does Claude publish without asking?**
 The plugin's skills tell Claude to show you the post, accounts and time and to wait for your confirmation. Claude also asks your permission before running tools that publish or schedule.
