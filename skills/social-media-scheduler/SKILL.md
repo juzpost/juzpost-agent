@@ -26,6 +26,7 @@ If the JuzPost tools are missing or signed out, follow the `setup` skill first. 
    - A local file or any video in Claude Code: `create_upload_url`, then PUT the original bytes, unchanged, to `upload_url` with the returned header. Keep the `media_key`.
 7. **Confirm.** Show the caption, media, each account (platform and username), any per-account differences, and the time in the workspace timezone. Wait for the user to agree.
 8. **Schedule.** One `schedule_post` call creates and schedules the post: `type`, `content`, `title` if needed, `media_keys` or `media_urls`, `account_ids`, either `publish_at` (ISO 8601 UTC, at least 10 minutes ahead) or `publish_now: true`, and an `idempotency_key` so a retry never makes a second post.
+   - Facebook text post with a link: set `platform_settings.facebook.link` to it (ask which one if there are several) and tell the user Facebook will show a preview card.
    - Different text per account: `account_overrides` keyed by account id (`title`, `description`, `hashtags`); one text for every account of a platform: `channel_overrides` keyed by platform id.
    - Different media or cover per account: `media_by_account`, `cover_by_account`.
    - Different time per account: `publish_at_overrides` keyed by account id.
@@ -39,7 +40,8 @@ To save a draft without scheduling, use `create_post` with the same fields, and 
 - `list_posts` filters by `status` (`draft`, `scheduled`, `published`, `failed`), `accountId`, and `from`/`to`; `sort: "scheduledFor"` orders by publish time.
 - `update_post` edits a draft or a scheduled post. `publish_at` on a scheduled post moves it to a new time. A scheduled post can no longer be edited from 10 minutes before it goes out, and published or failed posts can't be edited.
 - A scheduled post can't be cancelled from Claude; the user cancels it in the JuzPost dashboard at https://www.juzpost.com/dashboard/scheduled.
-- `delete_post` deletes a draft only. Confirm with the user first. It never removes anything already published on a platform.
+- `schedule_post` with a scheduled post's `post_id` and `publish_now: true` publishes it now instead of at its time. Confirm with the user first.
+- `delete_post` deletes a post in any status: draft, scheduled (its timer is cancelled, so it never goes out), failed or published. Confirm with the user first. It never removes anything already published on a platform; that stays there.
 - For a failed post, `get_post` gives each account's error; explain it in plain words.
 
 ## Limits
