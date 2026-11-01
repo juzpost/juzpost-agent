@@ -26,6 +26,7 @@ If the JuzPost tools are missing or signed out, follow the `setup` skill first. 
    - A local file or any video in Claude Code: `create_upload_url`, then PUT the original bytes, unchanged, to `upload_url` with the returned header. Keep the `media_key`.
 7. **Confirm.** Show the caption, media, each account (platform and username), any per-account differences, and the time in the workspace timezone. Wait for the user to agree.
 8. **Schedule.** One `schedule_post` call creates and schedules the post: `type`, `content`, `title` if needed, `media_keys` or `media_urls`, `account_ids`, either `publish_at` (ISO 8601 UTC, at least 10 minutes ahead) or `publish_now: true`, and an `idempotency_key` so a retry never makes a second post.
+   - Facebook text post with a link: set `platform_settings.facebook.link` to it (ask which one if there are several) and tell the user Facebook will show a preview card.
    - Different text per account: `account_overrides` keyed by account id (`title`, `description`, `hashtags`); one text for every account of a platform: `channel_overrides` keyed by platform id.
    - Different media or cover per account: `media_by_account`, `cover_by_account`.
    - Different time per account: `publish_at_overrides` keyed by account id.
