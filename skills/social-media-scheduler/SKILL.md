@@ -39,7 +39,8 @@ To save a draft without scheduling, use `create_post` with the same fields, and 
 - `list_posts` filters by `status` (`draft`, `scheduled`, `published`, `failed`), `accountId`, and `from`/`to`; `sort: "scheduledFor"` orders by publish time.
 - `update_post` edits a draft or a scheduled post. `publish_at` on a scheduled post moves it to a new time. A scheduled post can no longer be edited from 10 minutes before it goes out, and published or failed posts can't be edited.
 - A scheduled post can't be cancelled from Claude; the user cancels it in the JuzPost dashboard at https://www.juzpost.com/dashboard/scheduled.
-- `delete_post` deletes a draft only. Confirm with the user first. It never removes anything already published on a platform.
+- `schedule_post` with a scheduled post's `post_id` and `publish_now: true` publishes it now instead of at its time. Confirm with the user first.
+- `delete_post` deletes a post in any status: draft, scheduled (its timer is cancelled, so it never goes out), failed or published. Confirm with the user first. It never removes anything already published on a platform; that stays there.
 - For a failed post, `get_post` gives each account's error; explain it in plain words.
 
 ## Limits
