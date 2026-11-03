@@ -1,7 +1,7 @@
 {
   "name": "juzpost",
   "displayName": "JuzPost",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Free social media scheduler with low-cost paid plans. Schedule and publish posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress from Claude.",
   "author": {
     "name": "JuzPost",
@@ -32,5 +32,6 @@
     "wordpress",
     "cross-posting",
     "cli"
-  ]
+  ],
+  "privacyPolicyUrl": "https://www.juzpost.com/privacy-policy"
 }

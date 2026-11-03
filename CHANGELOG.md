@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1 (2026-11-03)
+
+- The DeepSeek Harness plugin moved to its own repository, [juzpost/dsh-juzpost](https://github.com/juzpost/dsh-juzpost); this repository no longer carries any code that reads a credential.
+- `privacyPolicyUrl` set in the Claude plugin manifest.
+
 ## 0.4.0 (2026-11-03)
 
 - One repository for every agent: Gemini CLI extension (`gemini-extension.json`), Cursor plugin (`.cursor-plugin/`, `mcp.json`), Grok Build plugin (`.grok-plugin/`), Qwen Code and the `skills` CLI install from the same skills.

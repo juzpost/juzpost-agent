@@ -1,6 +1,6 @@
 {
   "name": "juzpost",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "JuzPost is a free social media scheduler with low-cost paid plans. Schedule and publish posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress from your AI agent. Bundles the JuzPost skills and the hosted JuzPost MCP server.",
   "mcpServers": {
     "juzpost": {

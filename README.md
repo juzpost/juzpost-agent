@@ -84,7 +84,7 @@ The OpenClaw skill drives the [JuzPost CLI](https://github.com/juzpost/juzpost-c
 dsh plugin --profile web add dsh-juzpost
 ```
 
-Create an API key in JuzPost under Settings → API keys, export it as `JUZPOST_API_KEY`, and restart `dsh web`. Details in [plugins/dsh-juzpost](./plugins/dsh-juzpost).
+Create an API key in JuzPost under Settings → API keys, export it as `JUZPOST_API_KEY`, and restart `dsh web`. Source and details: [juzpost/dsh-juzpost](https://github.com/juzpost/dsh-juzpost).
 
 ### Any other MCP client
 
