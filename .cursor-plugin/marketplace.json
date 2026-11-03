@@ -1,5 +1,5 @@
 {
-  "name": "juzpost",
+  "name": "juzpost-agent",
   "owner": {
     "name": "JuzPost",
     "email": "support@juzpost.com"
@@ -19,12 +19,27 @@
         "email": "support@juzpost.com"
       },
       "homepage": "https://www.juzpost.com",
-      "repository": "https://github.com/juzpost/juzpost-claude-plugin",
+      "repository": "https://github.com/juzpost/juzpost-agent",
       "license": "MIT",
       "logo": ".claude-plugin/icon.png",
       "category": "productivity",
-      "tags": ["social-media", "scheduling", "marketing", "automation", "ai-agent"],
-      "keywords": ["juzpost", "social-media-scheduler", "mcp", "youtube", "instagram", "tiktok", "linkedin", "x"]
+      "tags": [
+        "social-media",
+        "scheduling",
+        "marketing",
+        "automation",
+        "ai-agent"
+      ],
+      "keywords": [
+        "juzpost",
+        "social-media-scheduler",
+        "mcp",
+        "youtube",
+        "instagram",
+        "tiktok",
+        "linkedin",
+        "x"
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "juzpost",
+  "name": "juzpost-agent",
   "description": "JuzPost, the free social media scheduler for AI agents: draft, schedule and publish posts to 11 networks at low cost",
   "owner": {
     "name": "JuzPost",
@@ -10,7 +10,10 @@
       "name": "juzpost",
       "description": "JuzPost is a free social media scheduler with low-cost paid plans. Schedule and publish posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress from your AI agent. Bundles the JuzPost skills and the hosted JuzPost MCP server.",
       "category": "productivity",
-      "source": { "type": "local", "path": "./" },
+      "source": {
+        "type": "local",
+        "path": "./"
+      },
       "homepage": "https://www.juzpost.com",
       "keywords": [
         "juzpost",
@@ -18,7 +21,10 @@
         "schedule social media posts",
         "social media automation"
       ],
-      "domains": ["juzpost.com", "www.juzpost.com"]
+      "domains": [
+        "juzpost.com",
+        "www.juzpost.com"
+      ]
     }
   ]
 }

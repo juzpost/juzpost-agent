@@ -14,7 +14,7 @@ One upload, every platform, and a clear report of what went out.
 ### Claude Code (plugin)
 
 ```text
-/plugin marketplace add juzpost/juzpost-claude-plugin
+/plugin marketplace add juzpost/juzpost-agent
 /plugin install juzpost@juzpost
 ```
 
@@ -43,7 +43,7 @@ For local development, clone this repository and symlink it into `~/.cursor/plug
 ### Gemini CLI
 
 ```bash
-gemini extensions install https://github.com/juzpost/juzpost-claude-plugin
+gemini extensions install https://github.com/juzpost/juzpost-agent
 ```
 
 The extension registers the JuzPost MCP server and the skills. On first use Gemini CLI opens a browser to sign in to JuzPost; run `/mcp auth juzpost` to sign in again. Without the extension, `gemini mcp add --transport http juzpost https://www.juzpost.com/mcp` registers the server alone.
@@ -51,7 +51,7 @@ The extension registers the JuzPost MCP server and the skills. On first use Gemi
 ### Qwen Code
 
 ```bash
-qwen extensions install juzpost/juzpost-claude-plugin:juzpost
+qwen extensions install juzpost/juzpost-agent:juzpost
 ```
 
 ### Grok Build
@@ -59,13 +59,13 @@ qwen extensions install juzpost/juzpost-claude-plugin:juzpost
 Install JuzPost from the xAI plugin marketplace inside Grok Build, or add this repository as a marketplace source:
 
 ```text
-grok plugin marketplace add juzpost/juzpost-claude-plugin
+grok plugin marketplace add juzpost/juzpost-agent
 ```
 
 ### Codex, OpenAI dots and other skill-based agents
 
 ```bash
-npx skills add juzpost/juzpost-claude-plugin
+npx skills add juzpost/juzpost-agent
 ```
 
 Installs the `setup` and `social-media-scheduler` skills into the agent's skills directory. Add the MCP server to the agent with the URL `https://www.juzpost.com/mcp`.
@@ -159,7 +159,7 @@ The plugin's skills tell Claude to show you the post, accounts and time and to w
 The connection, its permissions and workspace, and the posts you create. JuzPost receives the requests Claude sends to act, not your conversation. Details: [privacy policy](https://www.juzpost.com/privacy-policy).
 
 **How do I disconnect?**
-In JuzPost, go to Settings, Connections and revoke the connection. To remove the plugin in Claude Code, run `/plugin uninstall juzpost@juzpost`; in Gemini CLI, `gemini extensions uninstall juzpost`; in Cursor, remove it from Customize.
+In JuzPost, go to Settings, Connections and revoke the connection. To remove the plugin in Claude Code, run `/plugin uninstall juzpost@juzpost-agent`; in Gemini CLI, `gemini extensions uninstall juzpost`; in Cursor, remove it from Customize.
 
 **I'm moving from another scheduler. What changes?**
 If you've used Buffer, Hootsuite or Later, the calendar and queue will feel familiar. JuzPost adds Claude and a CLI on the same account.

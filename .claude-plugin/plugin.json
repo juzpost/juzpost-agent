@@ -10,7 +10,7 @@
   },
   "icon": ".claude-plugin/icon.png",
   "homepage": "https://api.juzpost.com/docs",
-  "repository": "https://github.com/juzpost/juzpost-claude-plugin",
+  "repository": "https://github.com/juzpost/juzpost-agent",
   "license": "MIT",
   "keywords": [
     "social-media-scheduler",

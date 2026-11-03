@@ -9,7 +9,7 @@ A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin tha
 dsh plugin --profile web add dsh-juzpost
 
 # or straight from the repository
-dsh plugin --profile web add "github:juzpost/juzpost-claude-plugin#path:/plugins/dsh-juzpost"
+dsh plugin --profile web add "github:juzpost/juzpost-agent#path:/plugins/dsh-juzpost"
 ```
 
 Then:

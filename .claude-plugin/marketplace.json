@@ -1,5 +1,5 @@
 {
-  "name": "juzpost",
+  "name": "juzpost-agent",
   "description": "The official JuzPost plugin: a free social media scheduler for Claude with MCP access and low-cost paid plans.",
   "owner": {
     "name": "JuzPost",
