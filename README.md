@@ -1,11 +1,11 @@
-# JuzPost for Claude: social media scheduler with MCP and CLI
+# JuzPost for AI agents: social media scheduler with MCP and CLI
 
-**JuzPost is a free social media scheduler for YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.** This plugin connects it to Claude Code and Claude Cowork over MCP, so you can draft, schedule and publish posts by asking Claude. Every paid plan includes full access from Claude plus the [JuzPost CLI](https://github.com/juzpost/juzpost-cli).
+**JuzPost is a free social media scheduler for YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.** This repository connects it to Claude Code, Claude Cowork, Cursor, Gemini CLI, Qwen Code, Grok Build, OpenClaw, DeepSeek Harness and any other agent that speaks MCP, so you can draft, schedule and publish posts by asking your agent. Every paid plan includes full access from Claude plus the [JuzPost CLI](https://github.com/juzpost/juzpost-cli).
 
 One upload, every platform, and a clear report of what went out.
 
 - **9 networks from one brief.** Short-form video, images and text posts.
-- **Claude asks before it publishes.** You see the caption, accounts and time first.
+- **Your agent asks before it publishes.** You see the caption, accounts and time first.
 - **Your own accounts, your own sign-in.** No API keys to paste; revoke access anytime.
 - **Scriptable too.** The same account works from the terminal with `juzpost-cli`.
 
@@ -33,6 +33,62 @@ claude mcp add --transport http juzpost https://www.juzpost.com/mcp
 ### claude.ai
 
 Settings, Connectors, add a custom connector with the URL `https://www.juzpost.com/mcp`.
+
+### Cursor
+
+Open Customize in the Cursor sidebar, find JuzPost in the marketplace and select Install. The plugin registers the JuzPost MCP server and the two skills; the first tool call opens a browser to sign in.
+
+For local development, clone this repository and symlink it into `~/.cursor/plugins/local/juzpost`, then run Developer: Reload Window.
+
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/juzpost/juzpost-claude-plugin
+```
+
+The extension registers the JuzPost MCP server and the skills. On first use Gemini CLI opens a browser to sign in to JuzPost; run `/mcp auth juzpost` to sign in again. Without the extension, `gemini mcp add --transport http juzpost https://www.juzpost.com/mcp` registers the server alone.
+
+### Qwen Code
+
+```bash
+qwen extensions install juzpost/juzpost-claude-plugin:juzpost
+```
+
+### Grok Build
+
+Install JuzPost from the xAI plugin marketplace inside Grok Build, or add this repository as a marketplace source:
+
+```text
+grok plugin marketplace add juzpost/juzpost-claude-plugin
+```
+
+### Codex, OpenAI dots and other skill-based agents
+
+```bash
+npx skills add juzpost/juzpost-claude-plugin
+```
+
+Installs the `setup` and `social-media-scheduler` skills into the agent's skills directory. Add the MCP server to the agent with the URL `https://www.juzpost.com/mcp`.
+
+### OpenClaw
+
+```bash
+openclaw skills install @juzpost/juzpost
+```
+
+The OpenClaw skill drives the [JuzPost CLI](https://github.com/juzpost/juzpost-cli) (`npm install -g juzpost-cli`, then `juzpost auth login`).
+
+### DeepSeek Harness
+
+```bash
+dsh plugin --profile web add dsh-juzpost
+```
+
+Create an API key in JuzPost under Settings → API keys, export it as `JUZPOST_API_KEY`, and restart `dsh web`. Details in [plugins/dsh-juzpost](./plugins/dsh-juzpost).
+
+### Any other MCP client
+
+Add a streamable HTTP MCP server with the URL `https://www.juzpost.com/mcp`. It signs you in with OAuth (dynamic client registration, PKCE) on first use, or takes a JuzPost API key as a Bearer token.
 
 ## What you can ask Claude
 
@@ -93,8 +149,8 @@ juzpost auth login
 **Is JuzPost free?**
 Yes. The Free plan schedules posts to 2 accounts on every network except X, and it is never charged. Using JuzPost from Claude or other AI agents starts with Solo.
 
-**Which plan do I need to post from Claude?**
-Any paid plan: Solo, Growth or Pro. Each one lets Claude upload media, create drafts, schedule and publish.
+**Which plan do I need to post from an agent?**
+Any paid plan: Solo, Growth or Pro. Each one lets the agent upload media, create drafts, schedule and publish.
 
 **Does Claude publish without asking?**
 The plugin's skills tell Claude to show you the post, accounts and time and to wait for your confirmation. Claude also asks your permission before running tools that publish or schedule.
@@ -103,7 +159,7 @@ The plugin's skills tell Claude to show you the post, accounts and time and to w
 The connection, its permissions and workspace, and the posts you create. JuzPost receives the requests Claude sends to act, not your conversation. Details: [privacy policy](https://www.juzpost.com/privacy-policy).
 
 **How do I disconnect?**
-In JuzPost, go to Settings, Connections and revoke the connection. To remove the plugin in Claude Code, run `/plugin uninstall juzpost@juzpost`.
+In JuzPost, go to Settings, Connections and revoke the connection. To remove the plugin in Claude Code, run `/plugin uninstall juzpost@juzpost`; in Gemini CLI, `gemini extensions uninstall juzpost`; in Cursor, remove it from Customize.
 
 **I'm moving from another scheduler. What changes?**
 If you've used Buffer, Hootsuite or Later, the calendar and queue will feel familiar. JuzPost adds Claude and a CLI on the same account.
@@ -113,6 +169,7 @@ If you've used Buffer, Hootsuite or Later, the calendar and queue will feel fami
 - Website: [juzpost.com](https://www.juzpost.com)
 - Pricing: [juzpost.com/pricing](https://www.juzpost.com/pricing)
 - Tool reference: [api.juzpost.com/docs](https://api.juzpost.com/docs)
+- CLI: [juzpost-cli](https://github.com/juzpost/juzpost-cli)
 - Privacy policy: [juzpost.com/privacy-policy](https://www.juzpost.com/privacy-policy)
 - Terms: [juzpost.com/terms-of-service](https://www.juzpost.com/terms-of-service)
 - Support: [support@juzpost.com](mailto:support@juzpost.com) or [juzpost.com/support](https://www.juzpost.com/support)

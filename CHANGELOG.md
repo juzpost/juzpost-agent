@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 (2026-11-03)
+
+- One repository for every agent: Gemini CLI extension (`gemini-extension.json`), Cursor plugin (`.cursor-plugin/`, `mcp.json`), Grok Build plugin (`.grok-plugin/`), Qwen Code and the `skills` CLI install from the same skills.
+- `plugins/dsh-juzpost`: a DeepSeek Harness plugin (npm `dsh-juzpost`) that connects the agent to the JuzPost MCP server with an API key and registers the posting workflow as a skill.
+- `clawhub/juzpost`: an OpenClaw skill that drives `juzpost-cli`, published on ClawHub as `@juzpost/juzpost`.
+- README has an install section per agent.
+
 ## 0.3.0 (2026-10-12)
 
 - Attaching media in chat goes through `upload_file`: the user picks the files in JuzPost's upload card, so nothing on claude.ai has to be allowed. `upload_media` is for public links, `create_upload_url` for Claude Code.
