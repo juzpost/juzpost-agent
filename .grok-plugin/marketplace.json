@@ -1,0 +1,24 @@
+{
+  "name": "juzpost",
+  "description": "JuzPost social media scheduler for AI agents: draft, schedule and publish posts to 11 networks",
+  "owner": {
+    "name": "JuzPost",
+    "email": "support@juzpost.com"
+  },
+  "plugins": [
+    {
+      "name": "juzpost",
+      "description": "Schedule and publish social media posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress from your AI agent. Bundles the JuzPost skills and the hosted JuzPost MCP server.",
+      "category": "productivity",
+      "source": { "type": "local", "path": "./" },
+      "homepage": "https://www.juzpost.com",
+      "keywords": [
+        "juzpost",
+        "social media scheduler",
+        "schedule social media posts",
+        "social media automation"
+      ],
+      "domains": ["juzpost.com", "www.juzpost.com"]
+    }
+  ]
+}

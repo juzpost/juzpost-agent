@@ -1,0 +1,11 @@
+{
+  "name": "juzpost",
+  "version": "0.4.0",
+  "description": "Schedule and publish social media posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress from your AI agent. Bundles the JuzPost skills and the hosted JuzPost MCP server.",
+  "mcpServers": {
+    "juzpost": {
+      "httpUrl": "https://www.juzpost.com/mcp",
+      "description": "Official JuzPost MCP server (hosted, streamable HTTP). Signs in with OAuth on first use: Gemini CLI opens a browser to sign in to JuzPost and pick a workspace. No token or local install needed."
+    }
+  }
+}
