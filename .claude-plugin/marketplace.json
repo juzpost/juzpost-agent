@@ -1,6 +1,6 @@
 {
   "name": "juzpost",
-  "description": "The official JuzPost plugin: a social media scheduler for Claude with MCP access.",
+  "description": "The official JuzPost plugin: a free social media scheduler for Claude with MCP access and low-cost paid plans.",
   "owner": {
     "name": "JuzPost",
     "email": "support@juzpost.com"
@@ -9,7 +9,7 @@
     {
       "name": "juzpost",
       "source": "./",
-      "description": "Schedule and publish posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress from Claude.",
+      "description": "Free social media scheduler with low-cost paid plans. Schedule and publish posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress from Claude.",
       "homepage": "https://api.juzpost.com/docs",
       "license": "MIT",
       "keywords": [

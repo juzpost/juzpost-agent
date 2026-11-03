@@ -13,7 +13,7 @@ export const SKILL_DESCRIPTION =
 
 export const SKILL_CONTENT = `# JuzPost
 
-JuzPost is a social media scheduler. The \`mcp__juzpost__*\` tools talk to the
+JuzPost is a free social media scheduler with low-cost paid plans. The \`mcp__juzpost__*\` tools talk to the
 user's JuzPost workspace. The user's explicit instructions take priority over
 this skill. Never schedule, publish or delete without the user's go-ahead.
 

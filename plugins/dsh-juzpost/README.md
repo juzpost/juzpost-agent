@@ -1,6 +1,6 @@
 # dsh-juzpost
 
-A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin that connects the agent to [JuzPost](https://www.juzpost.com) over MCP. The agent can list your connected social accounts, check platform limits, upload media, and draft, schedule or publish posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.
+A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin that connects the agent to [JuzPost](https://www.juzpost.com), a free social media scheduler with low-cost paid plans, over MCP. The agent can list your connected social accounts, check platform limits, upload media, and draft, schedule or publish posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.
 
 ## Install
 

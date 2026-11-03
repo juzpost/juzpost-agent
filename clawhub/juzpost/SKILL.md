@@ -1,13 +1,13 @@
 ---
 name: juzpost
-description: Schedule and publish social media posts with JuzPost from the terminal. Upload a video or image, create a draft, and schedule it to TikTok, YouTube Shorts, Instagram, X, Facebook, LinkedIn, Pinterest, Bluesky, Threads, Tumblr or WordPress, or smart-schedule a batch of drafts across an account group. Use when the user wants to post to social media or plan a content calendar.
+description: Schedule and publish social media posts with JuzPost, a free social media scheduler with low-cost paid plans, from the terminal. Upload a video or image, create a draft, and schedule it to TikTok, YouTube Shorts, Instagram, X, Facebook, LinkedIn, Pinterest, Bluesky, Threads, Tumblr or WordPress, or smart-schedule a batch of drafts across an account group. Use when the user wants to post to social media or plan a content calendar.
 homepage: https://www.juzpost.com
 metadata: {"openclaw":{"emoji":"📅","homepage":"https://www.juzpost.com","requires":{"bins":["juzpost"]},"install":[{"kind":"node","package":"juzpost-cli","bins":["juzpost"]}]}}
 ---
 
 # JuzPost
 
-JuzPost is a social media scheduler. This skill drives the `juzpost` command
+JuzPost is a free social media scheduler with low-cost paid plans. This skill drives the `juzpost` command
 line client ([juzpost-cli](https://www.npmjs.com/package/juzpost-cli)) on the
 user's own JuzPost account. The user's explicit instructions take priority
 over this skill. Never schedule or publish without the user's go-ahead.
