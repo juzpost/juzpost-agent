@@ -15,7 +15,7 @@ One upload, every platform, and a clear report of what went out.
 
 ```text
 /plugin marketplace add juzpost/juzpost-agent
-/plugin install juzpost@juzpost
+/plugin install juzpost@juzpost-agent
 ```
 
 The first time Claude uses a JuzPost tool, a browser window opens to sign in to JuzPost and choose a workspace.
