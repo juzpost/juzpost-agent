@@ -47,6 +47,7 @@ Call `get_context`. It returns the signed-in user, the current workspace (name, 
 | A rate limit about posts in the last hour | A workspace can create 30 posts per hour through a connector | Wait for the hour to pass |
 | An account shows `needs_reconnect` in `list_accounts` | That social account's own sign-in lapsed | Reconnect it at https://www.juzpost.com/dashboard/accounts; skip it for now and say which one |
 | A tool you expect is not listed | Its permission wasn't granted at sign-in | Disconnect JuzPost and connect again, granting that permission |
+| A call that changes an existing post (`update_post`, or `schedule_post` with a `post_id` and new text or accounts) is refused for the edit permission | The connection was granted without edit | Disconnect JuzPost and connect again with edit ticked. To schedule the draft as it is, call `schedule_post` with only its `post_id` and the time |
 
 ## Links
 

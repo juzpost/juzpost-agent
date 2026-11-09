@@ -33,7 +33,7 @@ If the JuzPost tools are missing or signed out, follow the `setup` skill first. 
    - Platform settings: `tiktok`, `pinterest`, `facebook`, `bluesky`, `wordpress`, each keyed by account id.
 9. **Report.** Call `get_post` and show each account's status. Refer to the post by its caption or title and to accounts by platform and username, not by id.
 
-To save a draft without scheduling, use `create_post` with the same fields, and schedule it later with `schedule_post` and its `post_id`.
+To save a draft without scheduling, use `create_post` with the same fields, and schedule it later with `schedule_post` and only its `post_id` and the time (`publish_at` or `publish_now: true`). It schedules the draft as it was saved. To change the draft first, use `update_post`.
 
 ## Existing posts
 

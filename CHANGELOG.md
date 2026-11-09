@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 (2026-11-09)
+
+- `schedule_post` with a `post_id` schedules the draft as saved: send only the post and the time. Changing an existing post needs the edit permission, and the setup skill says what to do when a call is refused for it.
+
 ## 0.4.1 (2026-11-03)
 
 - The DeepSeek Harness plugin moved to its own repository, [juzpost/dsh-juzpost](https://github.com/juzpost/dsh-juzpost); this repository no longer carries any code that reads a credential.
