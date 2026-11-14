@@ -1,0 +1,109 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "juzpost",
+  "version": "1.0.6",
+  "description": "Schedule and publish social media posts to YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress with JuzPost.",
+  "author": {
+    "name": "InLads LLC",
+    "email": "support@juzpost.com",
+    "url": "https://www.juzpost.com"
+  },
+  "homepage": "https://www.juzpost.com",
+  "repository": "https://github.com/juzpost/juzpost-agent/tree/main/chatgpt",
+  "license": "MIT",
+  "keywords": [
+    "social-media",
+    "scheduler",
+    "content-calendar",
+    "instagram",
+    "tiktok",
+    "youtube",
+    "linkedin"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "JuzPost",
+        "shortDescription": "Schedule posts to social media",
+        "longDescription": "JuzPost schedules and publishes social media posts for businesses, brands and creators. Write a post once, then schedule or publish it to YouTube (including Shorts), Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress from one calendar, instead of posting to each platform by hand.\n\nIn ChatGPT you can see your workspace and connected accounts, check caption and media limits for each platform, upload media from a link, create and edit draft posts, schedule a draft to one or more accounts or publish it now, review your queue, see why a post failed, and switch between workspaces for different brands or clients.\n\nChatGPT asks for your approval before anything is scheduled, published or deleted. JuzPost works only with the workspaces and social accounts your JuzPost sign-in can access. Social accounts are connected in the JuzPost dashboard, not from ChatGPT, and JuzPost cannot remove a post that is already live on a platform.",
+        "developerName": "InLads LLC",
+        "category": "Communication",
+        "capabilities": [
+          "Read workspace, accounts and posts",
+          "Check platform caption and media limits",
+          "Create and edit draft posts",
+          "Schedule or publish posts",
+          "Delete drafts"
+        ],
+        "websiteURL": "https://www.juzpost.com",
+        "supportURL": "https://www.juzpost.com/support",
+        "privacyPolicyURL": "https://www.juzpost.com/privacy-policy",
+        "termsOfServiceURL": "https://www.juzpost.com/terms-of-service",
+        "defaultPrompt": [
+          "Show my scheduled JuzPost posts for this week.",
+          "Create a JuzPost text draft announcing our new feature.",
+          "Which of my JuzPost posts failed, and why?"
+        ],
+        "brandColor": "#0BA4BB",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Reports the connected JuzPost workspace and its plan without changing anything.",
+              "prompt": "Which JuzPost workspace am I connected to, and what plan is it on?",
+              "tools_triggered": "get_context",
+              "expected_behavior": "Calls get_context and replies with the workspace name, the plan name (Pro for the review account) and the workspace timezone, and says nothing is blocked. No post or account is created or changed."
+            },
+            {
+              "description": "Lists the social accounts connected to the workspace.",
+              "prompt": "List the social media accounts connected to my JuzPost workspace.",
+              "tools_triggered": "list_accounts",
+              "expected_behavior": "Calls list_accounts and lists every connected account with its platform and username, and says whether each one is active or needs reconnecting. Nothing is changed."
+            },
+            {
+              "description": "Answers a platform limit question from JuzPost's publishing rules.",
+              "prompt": "Using JuzPost, what is the character limit for a post on X, and how many images can it have?",
+              "tools_triggered": "get_platform_limits",
+              "expected_behavior": "Calls get_platform_limits for X and answers that an X post can have up to 280 characters and up to 4 images. Nothing is changed."
+            },
+            {
+              "description": "Creates a text draft that is not scheduled or published.",
+              "prompt": "Create a text draft in JuzPost that says: Testing JuzPost from ChatGPT",
+              "tools_triggered": "create_post",
+              "expected_behavior": "Calls create_post with type text and the caption \"Testing JuzPost from ChatGPT\", then confirms a draft was created with status draft. Nothing is scheduled or published to any social account."
+            },
+            {
+              "description": "Lists the workspace's draft posts.",
+              "prompt": "Show me my draft posts in JuzPost.",
+              "tools_triggered": "list_posts",
+              "expected_behavior": "Calls list_posts with status draft and lists the drafts by caption or title with their type. After the previous case, the draft \"Testing JuzPost from ChatGPT\" is in the list. Nothing is changed."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Buying followers is not something JuzPost does. Expected: ChatGPT says JuzPost schedules and publishes posts and cannot buy followers or engagement; no JuzPost tool creates, schedules or changes anything.",
+              "prompt": "Use JuzPost to buy 1,000 Instagram followers for my account."
+            },
+            {
+              "description": "The request has no post type and no text, so there is nothing to publish yet. Expected: ChatGPT asks what to post (type and text) before calling create_post or schedule_post; nothing is created, scheduled or published.",
+              "prompt": "Post something to my Facebook page with JuzPost right now."
+            },
+            {
+              "description": "JuzPost cannot remove posts that are already live on a platform; delete_post only deletes drafts. Expected: ChatGPT explains that published YouTube videos must be removed in YouTube itself; nothing is deleted.",
+              "prompt": "Use JuzPost to delete every video on my YouTube channel."
+            }
+          ]
+        },
+        "demo_recording_url": "https://www.loom.com/share/bfe24adfe9a8499996b642418666f536",
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "Scheduling follows the permission model: drafts are created with their accounts and settings, then scheduled with only the post and the time; changing an existing post needs the edit permission."
+      }
+    }
+  }
+}

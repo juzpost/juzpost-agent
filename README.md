@@ -1,6 +1,6 @@
 # JuzPost for AI agents: social media scheduler with MCP and CLI
 
-**JuzPost is a free social media scheduler for YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.** This repository connects it to Claude Code, Claude Cowork, Cursor, Gemini CLI, Qwen Code, Grok Build, OpenClaw, DeepSeek Harness and any other agent that speaks MCP, so you can draft, schedule and publish posts by asking your agent. Every paid plan includes full access from Claude plus the [JuzPost CLI](https://github.com/juzpost/juzpost-cli).
+**JuzPost is a free social media scheduler for YouTube, Instagram, Facebook, TikTok, X, LinkedIn, Pinterest, Bluesky, Threads, Tumblr and WordPress.** This repository connects it to ChatGPT, Claude Code, Claude Cowork, Cursor, Gemini CLI, Qwen Code, Grok Build, OpenClaw, DeepSeek Harness and any other agent that speaks MCP, so you can draft, schedule and publish posts by asking your agent. Every paid plan includes full access from Claude plus the [JuzPost CLI](https://github.com/juzpost/juzpost-cli).
 
 One upload, every platform, and a clear report of what went out.
 
@@ -10,6 +10,10 @@ One upload, every platform, and a clear report of what went out.
 - **Scriptable too.** The same account works from the terminal with `juzpost-cli`.
 
 ## Install
+
+### ChatGPT (plugin)
+
+Install [JuzPost from the ChatGPT plugin directory](https://chatgpt.com/plugins/plugin_asdk_app_6ac35f5e673c8191837b3d97fe84c761), then sign in to JuzPost when ChatGPT asks. The package is in [`chatgpt/`](chatgpt/).
 
 ### Claude Code (plugin)
 
