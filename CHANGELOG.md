@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.3 (2026-11-16)
+
+- The OpenClaw skill left this repository; it is still installed from ClawHub as `@juzpost/juzpost`. Every skill and command here now has only `name` and `description` frontmatter, as the Claude plugin directory requires.
+
 ## 0.4.2 (2026-11-09)
 
 - `schedule_post` with a `post_id` schedules the draft as saved: send only the post and the time. Changing an existing post needs the edit permission, and the setup skill says what to do when a call is refused for it.
